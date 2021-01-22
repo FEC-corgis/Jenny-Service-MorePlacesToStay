@@ -11,7 +11,7 @@ class HouseArray extends React.Component {
   render() {
     // console.log('array test', this.props)
     return (
-      <div className="slider">
+      <div className="array">
         {this.props.top12.map(house => <House details={house}/>)}
       </div>
     )

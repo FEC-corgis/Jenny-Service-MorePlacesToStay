@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Wrapper from './Wrapper.jsx'
 import HouseArray from './HouseArray.jsx'
 import House from './House.jsx'
 
@@ -34,13 +35,18 @@ class App extends React.Component {
       return null
     } else {
       return (
-        <div>
+        <div className="carousel">
+
           <div className="title">More places to stay</div>
 
+          <div className="buttons">
           <button onClick={this.arrowLeft}>{'<'}</button>
           <button onClick={this.arrowRight}>{'>'}</button>
+          </div>
 
-          <HouseArray top12={this.state.top12}/>
+          <div className="wrapper">
+          <Wrapper top12={this.state.top12}/>
+          </div>
 
         </div>
       )

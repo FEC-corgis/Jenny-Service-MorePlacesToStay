@@ -1,9 +1,26 @@
+.carousel {
+  display: grid;
+  font-family: Arial, Helvetica, sans-serif;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+  "title buttons"
+  "wrapper wrapper";
+}
 .title {
+  grid-area: title;
   font-size: 20px;
+}
+.buttons {
+  grid-area: buttons;
+}
+.wrapper {
+  grid-area: wrapper;
+  width: 90%;
+  overflow: scroll;
+}
+.array {
+  display: flex;
 }
 img {
   width: 200px;
-}
-.slider {
-  display: flex;
 }
