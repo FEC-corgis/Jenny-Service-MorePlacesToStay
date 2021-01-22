@@ -1,0 +1,9 @@
+.title {
+  font-size: 20px;
+}
+img {
+  width: 200px;
+}
+.slider {
+  display: flex;
+}
