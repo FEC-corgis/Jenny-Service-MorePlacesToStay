@@ -12,11 +12,11 @@
 }
 .buttons {
   grid-area: buttons;
-  margin-left: 75%;
+  margin-left: 70%;
 }
 .wrapper {
   grid-area: wrapper;
-  width: 95%;
+  width: 88vw;
   overflow: scroll;
 }
 .array {
@@ -26,5 +26,6 @@
   margin: 10px;
 }
 img {
-  width: 200px;
+  width: 20vw;
+  border-radius: 10px;
 }
