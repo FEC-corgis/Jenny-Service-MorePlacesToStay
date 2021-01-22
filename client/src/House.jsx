@@ -9,7 +9,7 @@ class House extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="house">
           <br/>{<img src={this.props.details.houseUrl}/>}
           <br/>{this.props.details.overallRating} ({this.props.details.totalReviews})
           <br/>{this.props.details.houseType} - {this.props.details.bedrooms} bed

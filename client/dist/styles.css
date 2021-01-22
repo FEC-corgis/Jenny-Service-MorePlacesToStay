@@ -12,14 +12,18 @@
 }
 .buttons {
   grid-area: buttons;
+  margin-left: 75%;
 }
 .wrapper {
   grid-area: wrapper;
-  width: 90%;
+  width: 95%;
   overflow: scroll;
 }
 .array {
   display: flex;
+}
+.house {
+  margin: 10px;
 }
 img {
   width: 200px;
