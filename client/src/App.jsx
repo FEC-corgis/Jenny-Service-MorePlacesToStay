@@ -20,12 +20,12 @@ class App extends React.Component {
     if (this.state.array === 2 || this.state.array === 1) {
       this.setState({
         array: this.state.array - 1,
-        transform: this.state.transform + 175,
+        transform: this.state.transform + 125,
       })
      } else {
         this.setState({
           array: 2,
-          transform: -400
+          transform: -250
         })
       }
     }
@@ -33,7 +33,7 @@ class App extends React.Component {
     if (this.state.array === 0 || this.state.array === 1) {
       this.setState({
         array: this.state.array + 1,
-        transform: this.state.transform - 175,
+        transform: this.state.transform - 125,
       })
      } else {
         this.setState({

@@ -11,8 +11,8 @@ class Wrapper extends React.Component {
   render() {
     const styles = {
       color: 'green',
-      transform: `translateX(${this.props.transform}vh)`,
-      // transform: `translateX(80vh)`,
+      transform: `translateX(${this.props.transform}vw)`,
+      // transform: `translateX(80vw)`,
       'transition-timing-function': 'ease',
       transition: '.5s',
     }
