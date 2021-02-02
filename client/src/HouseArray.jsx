@@ -1,5 +1,7 @@
 import React from 'react';
 import House from './House.jsx'
+import styled from 'styled-components'
+import Styles, { ArrayStyled } from './Styles.js'
 
 class HouseArray extends React.Component {
   constructor(props) {
@@ -9,21 +11,14 @@ class HouseArray extends React.Component {
     }
   }
   render() {
-    console.log('transform test', this.props.transform)
-    // const styles = {
-    //   color: 'green',
-    //   transform: `translateX(${this.props.transform}vw)`,
-    //   // transform: `translateX(80vw)`,
-    //   'transition-timing-function': 'ease',
-    //   transition: '.5s',
-    //   position: 'fixed'
-    // }
+    const styles = {
+      transform: `translateX(${this.props.transform}vw)`,
+      transition: '.5s',
+    }
     return (
-      <div className="array"
-
-      >
+      <ArrayStyled style={styles}>
         {this.props.top12.map(house => <House details={house}/>)}
-      </div>
+      </ArrayStyled>
     )
   }
 }

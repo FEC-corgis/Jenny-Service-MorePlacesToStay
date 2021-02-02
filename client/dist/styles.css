@@ -15,14 +15,14 @@
   grid-area: buttons;
   margin-left: 70%;
 }
-.array {
-  display: flex;
-}
 .wrapper {
   grid-area: wrapper;
   width: 88vw;
   overflow: scroll;
   /* overflow: hidden; */
+}
+.array {
+  display: flex;
 }
 .house {
   margin: 10px;

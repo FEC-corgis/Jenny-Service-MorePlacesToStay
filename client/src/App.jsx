@@ -4,6 +4,8 @@ import axios from 'axios';
 import Wrapper from './Wrapper.jsx'
 import HouseArray from './HouseArray.jsx'
 import House from './House.jsx'
+import styled from 'styled-components'
+import Styles, { Carousel, Title, Buttons, WrapperStyled } from './Styles.js'
 
 class App extends React.Component {
   constructor(props) {
@@ -57,24 +59,25 @@ class App extends React.Component {
       return null
     } else {
       return (
-        <div className="carousel">
-          <div className="title">More places to stay</div>
+        <Carousel>
+          <Title>More places to stay</Title>
 
-          <div className="buttons">
+          <Buttons>
           <button onClick={this.arrowLeft}>{'<'}</button>
           <button onClick={this.arrowRight}>{'>'}</button>
-          </div>
+          </Buttons>
 
-          <div className="wrapper">
+          <WrapperStyled>
           <Wrapper
           top12={this.state.top12}
           array={this.state.array}
           transform={this.state.transform}
           />
-          </div>
+          </WrapperStyled>
+
           carousel index: {this.state.array}
           <br/>transform: {this.state.transform}
-        </div>
+        </Carousel>
       )
     }
   }

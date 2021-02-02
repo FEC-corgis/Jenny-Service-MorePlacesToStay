@@ -1,4 +1,6 @@
 import React from 'react';
+import styled from 'styled-components'
+import Styles, { HouseStyled, HousePic } from './Styles.js'
 
 class House extends React.Component {
   constructor(props) {
@@ -9,14 +11,14 @@ class House extends React.Component {
   }
   render() {
     return (
-      <div className="house">
-          <br/>{<img src={this.props.details.houseUrl}/>}
+      <HouseStyled>
+          <br/>{<HousePic src={this.props.details.houseUrl}/>}
           <br/>{this.props.details.overallRating} ({this.props.details.totalReviews})
           <br/>{this.props.details.houseType} - {this.props.details.bedrooms} bed
           <br/>{this.props.details.houseTitle}
           <br/>${this.props.details.totalPrice} / night
           <br/>Superhost: {this.props.details.superhost ? "Yes" : "No"}
-      </div>
+      </HouseStyled>
     )
   }
 }
