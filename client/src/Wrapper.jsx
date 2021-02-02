@@ -3,22 +3,14 @@ import HouseArray from './HouseArray.jsx'
 import styled from 'styled-components'
 import Styles, { ArrayStyled } from './Styles.js'
 
-class Wrapper extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      test: ''
-    }
-  }
-  render() {
+const Wrapper  = (props) => {
     return (
         <HouseArray
-        top12={this.props.top12}
-        array={this.props.array}
-        transform={this.props.transform}
+        top12={props.top12}
+        array={props.array}
+        transform={props.transform}
         />
     )
-  }
 }
 
 export default Wrapper;

@@ -6,8 +6,13 @@ export const Carousel = styled.div`
   font-family: 'Nunito Sans', sans-serif;
   grid-template-columns: 50% 50%;
   grid-template-areas:
+  "test test"
   "title buttons"
   "wrapper wrapper";
+`;
+
+export const Test = styled.div`
+  grid-area: test;
 `;
 
 export const Title = styled.div`
