@@ -8,9 +8,13 @@ app.use(express.static('./client/dist'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-app.get('/morePlaces/propId/:id', (req, res) => {
-  let data = dummyData.makeArray()
-  res.send(data)
+app.get('/morePlaces/propId/:id', async (req, res) => {
+  try {
+    let data = await dummyData.makeArray()
+    res.send(data)
+  } catch(e) {
+    console.log('ERROR', e)
+  }
 })
 
 app.listen(port, () => {

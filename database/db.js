@@ -6,6 +6,11 @@ const sequelize = new Sequelize({
   password: '',
 })
 
-sequelize.authenticate()
-.then(() => console.log('Sequelize connected.'))
-.catch(err => console.error('Unable to connect Sequelize.', err))
+let execAuth = async () => {
+  try {
+    await sequelize.authenticate()
+    console.log('Sequelize connected.')
+  } catch(e) {
+    console.error('Unable to connect Sequelize.', e)
+  }
+}
