@@ -1,6 +1,6 @@
 import React from 'react';
 import HouseArray from './HouseArray.jsx'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import Styles, { ArrayStyled } from './Styles.js'
 
 const Wrapper  = (props) => {

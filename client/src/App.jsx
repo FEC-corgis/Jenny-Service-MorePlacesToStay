@@ -4,7 +4,7 @@ import axios from 'axios';
 import Wrapper from './Wrapper.jsx'
 import HouseArray from './HouseArray.jsx'
 import House from './House.jsx'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import Styles, { Carousel, Test, Title, Buttons, WrapperStyled } from './Styles.js'
 
 const App = () => {

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 export const Carousel = styled.div`
   display: grid;
@@ -11,36 +11,36 @@ export const Carousel = styled.div`
   "wrapper wrapper";
 `;
 
-export const Test = styled.div`
+export const Test = window.styled.div`
   grid-area: test;
 `;
 
-export const Title = styled.div`
+export const Title = window.styled.div`
   grid-area: title;
   font-size: 20px;
 `;
 
-export const Buttons = styled.div`
+export const Buttons = window.styled.div`
   grid-area: buttons;
   margin-left: 70%;
 `;
 
-export const WrapperStyled = styled.div`
+export const WrapperStyled = window.styled.div`
   grid-area: wrapper;
   width: 95vw;
   /* overflow: scroll; */
   overflow: hidden;
 `;
 
-export const ArrayStyled = styled.div`
+export const ArrayStyled = window.styled.div`
   display: flex;
 `;
 
-export const HouseStyled = styled.div`
+export const HouseStyled = window.styled.div`
   margin: 10px;
 `;
 
-export const HousePic = styled.img`
+export const HousePic = window.styled.img`
   width: 25vw;
   border-radius: 10px;
 `;
