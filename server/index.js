@@ -8,7 +8,7 @@ app.use(express.static('./client/dist'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-app.get('/test', (req, res) => {
+app.get('/morePlaces/propId/:id', (req, res) => {
   let data = dummyData.makeArray()
   res.send(data)
 })

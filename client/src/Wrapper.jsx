@@ -11,7 +11,10 @@ class Wrapper extends React.Component {
   render() {
     return (
       <div>
-        <HouseArray top12={this.props.top12}/>
+        <HouseArray
+        top12={this.props.top12}
+        array={this.props.array}
+        />
       </div>
     )
   }
