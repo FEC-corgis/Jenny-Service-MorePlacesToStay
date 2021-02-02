@@ -9,9 +9,19 @@ class HouseArray extends React.Component {
     }
   }
   render() {
-    // console.log('array test', this.props)
+    console.log('transform test', this.props.transform)
+    // const styles = {
+    //   color: 'green',
+    //   transform: `translateX(${this.props.transform}vh)`,
+    //   // transform: `translateX(80vh)`,
+    //   'transition-timing-function': 'ease',
+    //   transition: '.5s',
+    //   position: 'fixed'
+    // }
     return (
-      <div className={'array array' + this.props.array}>
+      <div className="array"
+
+      >
         {this.props.top12.map(house => <House details={house}/>)}
       </div>
     )

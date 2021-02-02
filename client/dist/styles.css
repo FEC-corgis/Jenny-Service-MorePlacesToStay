@@ -18,26 +18,17 @@
 .array {
   display: flex;
 }
-.array0 {
-  background-color: green;
-}
-.array1 {
-  background-color: yellow;
-
-  right: 100vh;
-}
-.array2 {
-  background-color: blue;
-}
 .wrapper {
   grid-area: wrapper;
   width: 88vw;
   overflow: scroll;
+  /* overflow: hidden; */
 }
 .house {
   margin: 10px;
 }
 img {
-  width: 20vw;
+  width: 25vw;
   border-radius: 10px;
+  position: relative
 }

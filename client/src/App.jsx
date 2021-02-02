@@ -11,6 +11,7 @@ class App extends React.Component {
     this.state = {
       top12: [],
       array: 0,
+      transform: 0,
     }
     this.arrowLeft = this.arrowLeft.bind(this)
     this.arrowRight = this.arrowRight.bind(this)
@@ -18,23 +19,26 @@ class App extends React.Component {
   arrowLeft() {
     if (this.state.array === 2 || this.state.array === 1) {
       this.setState({
-        array: this.state.array - 1
+        array: this.state.array - 1,
+        transform: this.state.transform + 175,
       })
      } else {
         this.setState({
-          array: 2
+          array: 2,
+          transform: -400
         })
       }
     }
   arrowRight() {
     if (this.state.array === 0 || this.state.array === 1) {
-      console.log('got here')
       this.setState({
-        array: this.state.array + 1
+        array: this.state.array + 1,
+        transform: this.state.transform - 175,
       })
      } else {
         this.setState({
-          array: 0
+          array: 0,
+          transform: 0
         })
       }
   }
@@ -43,7 +47,8 @@ class App extends React.Component {
     .then(res =>{
       console.log(res.data)
       this.setState({
-        top12: [res.data[0]],
+        top12: res.data
+        // top12: [res.data[0]],
       })
     })
   }
@@ -53,7 +58,6 @@ class App extends React.Component {
     } else {
       return (
         <div className="carousel">
-
           <div className="title">More places to stay</div>
 
           <div className="buttons">
@@ -65,9 +69,11 @@ class App extends React.Component {
           <Wrapper
           top12={this.state.top12}
           array={this.state.array}
+          transform={this.state.transform}
           />
           </div>
           carousel index: {this.state.array}
+          <br/>transform: {this.state.transform}
         </div>
       )
     }

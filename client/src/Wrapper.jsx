@@ -9,11 +9,20 @@ class Wrapper extends React.Component {
     }
   }
   render() {
+    const styles = {
+      color: 'green',
+      transform: `translateX(${this.props.transform}vh)`,
+      // transform: `translateX(80vh)`,
+      'transition-timing-function': 'ease',
+      transition: '.5s',
+    }
     return (
-      <div>
+      <div className="testthis"
+      style={styles}>
         <HouseArray
         top12={this.props.top12}
         array={this.props.array}
+        transform={this.props.transform}
         />
       </div>
     )
