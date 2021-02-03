@@ -31,10 +31,16 @@ const App = () => {
       }
   }
   useEffect(() => {
-    axios('/morePlaces/propId/5')
+    axios('http://localhost:3000/morePlaces/propId/5')
     .then(res =>{
-      console.log(res.data)
+      console.log('MOREPLACES DUMMYDATA', res.data)
       setTop12(res.data)
+    })
+    .then(() => {
+      return axios('http://localhost:3000/reviews/overallRating/5')
+    })
+    .then(res => {
+      console.log('MOREPLACES overall rating', res.data)
     })
   }, [])
 

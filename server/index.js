@@ -3,10 +3,12 @@ const app = express()
 const port = 1985
 const db = require('../database/db.js')
 const dummyData = require('./dummyData.js')
+const cors = require('cors')
 
 app.use(express.static('./client/dist'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+app.use(cors())
 
 app.get('/morePlaces/propId/:id', async (req, res) => {
   try {
