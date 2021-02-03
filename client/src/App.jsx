@@ -15,16 +15,16 @@ const App = () => {
   const arrowLeft = () => {
     if (array === 2 || array === 1) {
       setArray(array - 1)
-      setTransform(transform + 125)
+      setTransform(transform + 80)
      } else {
        setArray(2)
-       setTransform(-250)
+       setTransform(-160)
       }
     }
   const arrowRight = () => {
     if (array === 0 || array === 1) {
       setArray(array + 1)
-      setTransform(transform - 125)
+      setTransform(transform - 80)
      } else {
        setArray(0)
        setTransform(0)
@@ -52,6 +52,7 @@ const App = () => {
           <Title>More places to stay</Title>
 
           <Buttons>
+            {array + 1}/3 {" "}
           <button onClick={arrowLeft}>{'<'}</button>
           <button onClick={arrowRight}>{'>'}</button>
           </Buttons>
