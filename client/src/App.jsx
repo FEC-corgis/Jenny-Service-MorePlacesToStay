@@ -7,7 +7,7 @@ import House from './House.jsx'
 // import styled from 'styled-components'
 import Styles, { Carousel, Test, Title, Buttons, WrapperStyled } from './Styles.js'
 
-const App = () => {
+const App = (props) => {
   const [top12, setTop12] = useState([])
   const [array, setArray] = useState(0)
   const [transform, setTransform] = useState(0)
@@ -30,14 +30,15 @@ const App = () => {
        setTransform(0)
       }
   }
+  let id = props.match.params.id
   useEffect(() => {
-    axios('/morePlaces/propId/5')
+    axios(`/morePlaces/propId/${id}`)
     .then(res =>{
       console.log('MOREPLACES DUMMYDATA', res.data)
       setTop12(res.data)
     })
     .then(() => {
-      return axios('/reviews/overallRating/5')
+      return axios(`/reviews/overallRating/${id}`)
     })
     .then(res => {
       console.log('MOREPLACES overall rating', res.data)
