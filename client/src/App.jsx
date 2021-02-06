@@ -35,13 +35,7 @@ const App = (props) => {
     axios(`/morePlaces/propId/${id}`)
     .then(res =>{
       console.log('MOREPLACES DUMMYDATA', res.data)
-      setTop12(res.data)
-    })
-    .then(() => {
-      return axios(`/reviews/overallRating/${id}`)
-    })
-    .then(res => {
-      console.log('MOREPLACES overall rating', res.data)
+      setTop12(res.data.houseArray)
     })
   }, [])
 
