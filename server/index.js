@@ -18,7 +18,8 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
     let data = {}
     let houseArray = await dummyData.makeArray()
     data.houseArray = houseArray
-    let overall = await axios(`http://localhost:1984/reviews/morePlaces/${id}`)
+    // let overall = await axios(`http://localhost:1984/reviews/morePlaces/${id}`)
+    let overall = await axios(`http://3.22.194.10:1984/reviews/morePlaces/${id}`)
     data.overallRating = Number(overall.data.overallRating)
     res.send(data)
   } catch(e) {
