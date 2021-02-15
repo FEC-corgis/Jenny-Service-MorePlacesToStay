@@ -5,7 +5,7 @@ import Wrapper from './Wrapper.jsx'
 import HouseArray from './HouseArray.jsx'
 import House from './House.jsx'
 // import styled from 'styled-components'
-import Styles, { Carousel, Test, Title, Buttons, WrapperStyled } from './Styles.js'
+import Styles, { Carousel, Test, Title, Buttons, WrapperStyled, Counter } from './Styles.js'
 
 const App = (props) => {
   const [top12, setTop12] = useState([])
@@ -53,7 +53,7 @@ const App = (props) => {
           <Title>More places to stay</Title>
 
           <Buttons>
-            {array + 1}/3 {" "}
+            <Counter>{array + 1}/3 </Counter>{" "}
           <button onClick={arrowLeft}>{'<'}</button>
           <button onClick={arrowRight}>{'>'}</button>
           </Buttons>
