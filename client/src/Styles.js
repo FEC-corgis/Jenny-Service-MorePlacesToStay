@@ -31,7 +31,7 @@ export const Buttons = window.styled.div`
   grid-area: buttons;
   display: flex;
   align-items: center;
-  column-gap: 15px;
+  column-gap: 12px;
   margin-left: 70%;
 `;
 
@@ -39,6 +39,32 @@ export const Counter = window.styled.div`
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 3px;
+`;
+
+export const Left = window.styled.button`
+  height: 32px;
+  width: 32px;
+  background-color: white;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px lightgray;
+  font-size: 16px;
+`;
+
+export const Right = window.styled.button`
+  height: 32px;
+  width: 32px;
+  background-color: white;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px lightgray;
+  font-size: 16px;
 `;
 
 export const WrapperStyled = window.styled.div`
