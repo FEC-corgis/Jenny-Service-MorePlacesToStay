@@ -20,7 +20,6 @@ export const Carousel = window.styled.div`
 
 export const Test = window.styled.div`
   grid-area: test;
-  visibility: hidden;
 `;
 
 export const Title = window.styled.div`
@@ -36,7 +35,7 @@ export const Buttons = window.styled.div`
   display: flex;
   align-items: center;
   column-gap: 12px;
-  margin-left: 70%;
+  margin-left: 72%;
 `;
 
 export const Counter = window.styled.div`
@@ -92,7 +91,6 @@ export const HouseStyled = window.styled.div`
 `;
 
 export const HousePic = window.styled.img`
-  // width: 265px;
   width: 20vw;
   border-radius: 10px;
 `;

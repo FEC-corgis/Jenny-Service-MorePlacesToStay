@@ -44,11 +44,9 @@ const App = (props) => {
     } else {
       return (
         <Carousel>
-          <Test>
-          State:
-          <br/>carousel index: {array}
-          <br/>transform: {transform}
-          </Test>
+          {/* <Test>
+          carousel index: {array} transform: {transform}
+          </Test> */}
 
           <Title>More places to stay</Title>
 
