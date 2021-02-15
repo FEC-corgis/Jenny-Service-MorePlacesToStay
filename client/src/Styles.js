@@ -1,6 +1,8 @@
 // import styled from 'styled-components';
 import { Star } from "@styled-icons/boxicons-solid";
 
+// BACKGROUND
+
 export const Carousel = window.styled.div`
   display: grid;
   font-family: Arial, Helvetica, sans-serif;
@@ -26,6 +28,8 @@ export const Title = window.styled.div`
   font-size: 25px;
   font-weight: 600;
 `;
+
+// BUTTONS
 
 export const Buttons = window.styled.div`
   grid-area: buttons;
@@ -67,26 +71,29 @@ export const Right = window.styled.button`
   font-size: 16px;
 `;
 
+// HOUSE CONTAINERS
+
 export const WrapperStyled = window.styled.div`
   grid-area: wrapper;
-  width: 78vw;
-  /* overflow: scroll; */
+  width: 85vw;
+  // overflow: scroll;
   overflow: hidden;
 `;
 
 export const ArrayStyled = window.styled.div`
   display: flex;
   width: 80vw;
+  column-gap: 17px;
 `;
 
 // HOUSE
 
 export const HouseStyled = window.styled.div`
-  margin: 10px;
 `;
 
 export const HousePic = window.styled.img`
-  width: 18vw;
+  // width: 265px;
+  width: 20vw;
   border-radius: 10px;
 `;
 

@@ -15,16 +15,16 @@ const App = (props) => {
   const arrowLeft = () => {
     if (array === 2 || array === 1) {
       setArray(array - 1)
-      setTransform(transform + 80)
+      setTransform(transform + 85)
      } else {
        setArray(2)
-       setTransform(-160)
+       setTransform(-170)
       }
     }
   const arrowRight = () => {
     if (array === 0 || array === 1) {
       setArray(array + 1)
-      setTransform(transform - 80)
+      setTransform(transform - 85)
      } else {
        setArray(0)
        setTransform(0)
