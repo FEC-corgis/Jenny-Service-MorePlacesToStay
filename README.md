@@ -4,7 +4,7 @@ I built this project from scratch to clone an Airbnb product page carousel. It d
 
 ## Live Demo Links
 
-  - Reviews: http://18.222.249.216:1985/rooms/80/
+  - Carousel: http://18.222.249.216:1985/rooms/80/
   - Proxy: http://3.128.186.14:3000/rooms/80/
 
 ## Setup on Local
