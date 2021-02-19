@@ -6,7 +6,7 @@ import House from './House.jsx'
 import ThingsToKnow from './ThingsToKnow.jsx'
 import TODOWrapper from './TODOWrapper.jsx'
 // import styled from 'styled-components'
-import Styles, { Carousel, Test, Title, Buttons, WrapperStyled, Counter, Left, Right, GrayBg, TODOCarousel, TODOTest, TODOTitle, TODOWrapperStyled, TODOLine, ArrowIcon, ArrowIconLeft } from './Styles.js'
+import Styles, { Carousel, Test, Title, Buttons, WrapperStyled, Counter, Left, Right, GrayBg, TODOCarousel, TODOTest, TODOTitle, TODOWrapperStyled, TODOLine, ArrowIcon, ArrowIconLeft, ThingsLine } from './Styles.js'
 
 const App = (props) => {
   const [top12, setTop12] = useState([])
@@ -65,6 +65,8 @@ const App = (props) => {
     } else {
       return (
         <div>
+      {/* <ThingsLine></ThingsLine> */}
+
           <ThingsToKnow/>
           <p></p>{" "}
     <GrayBg>

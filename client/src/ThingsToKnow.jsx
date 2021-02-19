@@ -5,8 +5,6 @@ const ThingsToKnow = () => {
   return (
     <ThingsToKnowStyled>
 
-      <ThingsLine></ThingsLine>
-
       <p></p><ThingsTitle>Things to know</ThingsTitle>
 
       <br/><ThingsTable>

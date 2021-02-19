@@ -29,6 +29,9 @@ export const ThingsToKnowStyled = window.styled.div`
 export const ThingsLine = window.styled.div`
   height: 1px;
   background-color: lightgray;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const ThingsTitle = window.styled.div`
