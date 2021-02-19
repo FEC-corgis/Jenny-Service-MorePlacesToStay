@@ -63,6 +63,7 @@ const App = (props) => {
           transform={transform}
           />
           </WrapperStyled>
+
         </Carousel>
       )
     }

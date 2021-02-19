@@ -2,10 +2,12 @@
 
 I built this project from scratch to clone an Airbnb product page carousel. It displays an array of 12 houses, showing 4 houses at a time, and rotates continuously between the first and last turn cycles when clicked. Made with Express, React, and Node, and deployed using Amazon EC2.
 
-## Live Demo Links
+### Click [here](https://drive.google.com/file/d/1mt6DU9qSAPfE5dULvrw0HqkH4PqjrBEu/view?usp=sharing) for demo!
 
-  - Carousel: http://18.222.249.216:1985/rooms/80/
-  - Proxy: http://3.128.186.14:3000/rooms/80/
+<!-- ## Live Demo Links
+
+  - Reviews: [link]
+  - Proxy: [link] -->
 
 ## Setup on Local
 
