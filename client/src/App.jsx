@@ -5,7 +5,7 @@ import HouseArray from './HouseArray.jsx'
 import House from './House.jsx'
 import ThingsToKnow from './ThingsToKnow.jsx'
 // import styled from 'styled-components'
-import Styles, { Carousel, Test, Title, Buttons, WrapperStyled, Counter, Left, Right } from './Styles.js'
+import Styles, { Carousel, Test, Title, Buttons, WrapperStyled, Counter, Left, Right, GrayBg } from './Styles.js'
 
 const App = (props) => {
   const [top12, setTop12] = useState([])
@@ -46,7 +46,7 @@ const App = (props) => {
         <div>
 
           <ThingsToKnow/>
-
+<GrayBg>
         <Carousel>
           {/* <Test>
           carousel index: {array} transform: {transform}
@@ -69,6 +69,7 @@ const App = (props) => {
           </WrapperStyled>
 
         </Carousel>
+  </GrayBg>
         </div>
       )
     }

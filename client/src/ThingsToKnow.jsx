@@ -60,7 +60,7 @@ const ThingsToKnow = () => {
       <ThingsTableCol>
       <ThingsTableTitle>Cancellation policy</ThingsTableTitle>
 
-        <br/>Add your trip dates to get the cancellation details for this stay.
+      <ThingsTableRow>Add your trip dates to get the cancellation details for this stay.</ThingsTableRow>
         <p></p><ThingsTableLink>
           Add dates<ArrowIcon/>
           </ThingsTableLink>

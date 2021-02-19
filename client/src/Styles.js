@@ -45,6 +45,7 @@ export const ThingsTableCol = window.styled.div`
 
 export const ThingsTableRow = window.styled.div`
   display: flex;
+  width: 25vw;
   align-items: center;
   column-gap: 15px;
   padding: 3px;
@@ -58,9 +59,14 @@ export const ThingsTableTitle = window.styled.div`
 export const ThingsTableLink = window.styled.div`
   font-weight: 600;
   text-decoration: underline;
+  cursor: pointer;
 `;
 
 // BACKGROUND
+
+export const GrayBg = window.styled.div`
+  background-color: #F7F7F7
+`;
 
 export const Carousel = window.styled.div`
   display: grid;
@@ -70,6 +76,7 @@ export const Carousel = window.styled.div`
   width: 87vw;
   margin-left: auto;
   margin-right: auto;
+  padding: 30px;
   grid-template-columns: 50% 50%;
   grid-template-areas:
   "test test"
