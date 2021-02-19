@@ -5,7 +5,7 @@ const ThingsToKnow = () => {
   return (
     <ThingsToKnowStyled>
 
-      <p></p><ThingsTitle>Things to know</ThingsTitle>
+      <ThingsTitle>Things to know</ThingsTitle>
 
       <br/><ThingsTable>
       <ThingsTableCol>

@@ -3,4 +3,5 @@ node_modules
 .env
 *.pem
 bundleMorePlaces.js
+bundleMorePlaces2.js
 .DS_Store
