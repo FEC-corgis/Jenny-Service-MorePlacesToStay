@@ -31,7 +31,7 @@ export const ThingsLine = window.styled.div`
 `;
 
 export const ThingsTitle = window.styled.div`
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 600;
 `;
 
@@ -51,12 +51,20 @@ export const ThingsTableRow = window.styled.div`
   padding: 3px;
 `;
 
+export const ThingsTableRowDouble = window.styled.div`
+  position: relative;
+  left: 30px;
+  width: 22vw;
+`;
+
 export const ThingsTableTitle = window.styled.div`
-  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
   font-weight: 600;
 `;
 
-export const ThingsTableLink = window.styled.div`
+export const ThingsTableLink = window.styled.span`
   font-weight: 600;
   text-decoration: underline;
   cursor: pointer;
@@ -90,7 +98,7 @@ export const Test = window.styled.div`
 
 export const Title = window.styled.div`
   grid-area: title;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 600;
 `;
 
@@ -227,10 +235,12 @@ export const AlcoholIcon = window.styled(GlassCheers)`
 `;
 
 export const SparkleIcon = window.styled(Sparkles)`
+  position: absolute;
   width: 15px;
 `;
 
 export const SprayIcon = window.styled(SprayCan)`
+  position: absolute;
   width: 15px;
 `;
 

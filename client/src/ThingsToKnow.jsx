@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles, { ThingsToKnowStyled, ThingsTable, ThingsTitle, ThingsTableTitle, ThingsLine, ThingsTableLink, ClockIcon, ThingsTableRow, ArrowIcon, NoSmoking, SelfCheckIcon, PetsIcon, AlcoholIcon, ThingsTableCol, SparkleIcon, SprayIcon, CheckIcon } from './Styles.js';
+import Styles, { ThingsToKnowStyled, ThingsTable, ThingsTitle, ThingsTableTitle, ThingsLine, ThingsTableLink, ClockIcon, ThingsTableRow, ArrowIcon, NoSmoking, SelfCheckIcon, PetsIcon, AlcoholIcon, ThingsTableCol, SparkleIcon, SprayIcon, CheckIcon, ThingsTableRowDouble } from './Styles.js';
 
 const ThingsToKnow = () => {
   return (
@@ -13,7 +13,7 @@ const ThingsToKnow = () => {
       <ThingsTableCol>
         <ThingsTableTitle>House Rules</ThingsTableTitle>
 
-        <br/><ThingsTableRow>
+        <ThingsTableRow>
           <ClockIcon/>Check-in: After 3:00 PM
           </ThingsTableRow>
           <ThingsTableRow>
@@ -40,11 +40,12 @@ const ThingsToKnow = () => {
       <ThingsTableCol>
       <ThingsTableTitle>Health & safety</ThingsTableTitle>
 
-      <br/><ThingsTableRow>
-          <SparkleIcon/>Committed to Airbnb's enhanced cleaning process. <ThingsTableLink>Learn more</ThingsTableLink>
+      <ThingsTableRow>
+          <SparkleIcon/><ThingsTableRowDouble>Committed to Airbnb's enhanced cleaning process. {" "} <ThingsTableLink>Learn more</ThingsTableLink>
+          </ThingsTableRowDouble>
           </ThingsTableRow>
           <ThingsTableRow>
-          <SprayIcon/>Airbnb's social-distancing and other COVID-19-related guidelines apply
+          <SprayIcon/><ThingsTableRowDouble>Airbnb's social-distancing and other COVID-19-related guidelines apply</ThingsTableRowDouble>
           </ThingsTableRow>
           <ThingsTableRow>
           <CheckIcon/>Carbon monoxide alarm
