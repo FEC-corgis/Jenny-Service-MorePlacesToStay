@@ -1,6 +1,45 @@
 // import styled from 'styled-components';
 import { Star } from "@styled-icons/boxicons-solid";
 
+// THINGSTOKNOW
+
+export const ThingsToKnowStyled = window.styled.div`
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  width: 87vw;
+  height: 60vh;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export const ThingsLine = window.styled.div`
+  height: 1px;
+  background-color: lightgray;
+`;
+
+export const ThingsTitle = window.styled.div`
+  font-size: 25px;
+  font-weight: 600;
+`;
+
+export const ThingsTable = window.styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+`;
+
+export const ThingsTableTitle = window.styled.div`
+  font-size: 17px;
+  font-weight: 600;
+`;
+
+export const ThingsTableLink = window.styled.div`
+  font-weight: 600;
+  text-decoration: underline;
+`;
+
 // BACKGROUND
 
 export const Carousel = window.styled.div`

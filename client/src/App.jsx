@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Wrapper from './Wrapper.jsx'
 import HouseArray from './HouseArray.jsx'
 import House from './House.jsx'
+import ThingsToKnow from './ThingsToKnow.jsx'
 // import styled from 'styled-components'
 import Styles, { Carousel, Test, Title, Buttons, WrapperStyled, Counter, Left, Right } from './Styles.js'
 
@@ -43,10 +43,14 @@ const App = (props) => {
       return null
     } else {
       return (
+        <div>
+
+          <ThingsToKnow/>
+
         <Carousel>
           {/* <Test>
           carousel index: {array} transform: {transform}
-          </Test> */}
+        </Test> */}
 
           <Title>More places to stay</Title>
 
@@ -65,6 +69,7 @@ const App = (props) => {
           </WrapperStyled>
 
         </Carousel>
+        </div>
       )
     }
 }
