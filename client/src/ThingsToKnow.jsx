@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles, { ThingsToKnowStyled, ThingsTable, ThingsTitle, ThingsTableTitle, ThingsLine, ThingsTableLink } from './Styles.js';
+import Styles, { ThingsToKnowStyled, ThingsTable, ThingsTitle, ThingsTableTitle, ThingsLine, ThingsTableLink, ClockIcon, ThingsTableRow, ArrowIcon, NoSmoking, SelfCheckIcon, PetsIcon, AlcoholIcon, ThingsTableCol, SparkleIcon, SprayIcon, CheckIcon } from './Styles.js';
 
 const ThingsToKnow = () => {
   return (
@@ -10,21 +10,61 @@ const ThingsToKnow = () => {
       <p></p><ThingsTitle>Things to know</ThingsTitle>
 
       <br/><ThingsTable>
-      <div>
+      <ThingsTableCol>
         <ThingsTableTitle>House Rules</ThingsTableTitle>
-        Check-in: After 3:00 PM
-        <ThingsTableLink>Show all</ThingsTableLink>
-      </div>
-      <div>
+
+        <br/><ThingsTableRow>
+          <ClockIcon/>Check-in: After 3:00 PM
+          </ThingsTableRow>
+          <ThingsTableRow>
+          <ClockIcon/>Checkout: 10:00 AM
+          </ThingsTableRow>
+          <ThingsTableRow>
+          <SelfCheckIcon/>Self check-in with keypad
+          </ThingsTableRow>
+          <ThingsTableRow>
+          <NoSmoking/>No smoking
+          </ThingsTableRow>
+          <ThingsTableRow>
+          <PetsIcon/>No pets
+          </ThingsTableRow>
+          <ThingsTableRow>
+          <AlcoholIcon/>No parties or events
+          </ThingsTableRow>
+
+        <br/><ThingsTableLink>
+          Show all<ArrowIcon/>
+          </ThingsTableLink>
+      </ThingsTableCol>
+
+      <ThingsTableCol>
       <ThingsTableTitle>Health & safety</ThingsTableTitle>
-        Committed to Airbnb's enhanced cleaning process. Learn more
-        <ThingsTableLink>Show all</ThingsTableLink>
-      </div>
-      <div>
+
+      <br/><ThingsTableRow>
+          <SparkleIcon/>Committed to Airbnb's enhanced cleaning process. <ThingsTableLink>Learn more</ThingsTableLink>
+          </ThingsTableRow>
+          <ThingsTableRow>
+          <SprayIcon/>Airbnb's social-distancing and other COVID-19-related guidelines apply
+          </ThingsTableRow>
+          <ThingsTableRow>
+          <CheckIcon/>Carbon monoxide alarm
+          </ThingsTableRow>
+          <ThingsTableRow>
+          <CheckIcon/>Smoke alarm
+          </ThingsTableRow>
+        <br/><ThingsTableLink>
+          Show all<ArrowIcon/>
+          </ThingsTableLink>
+      </ThingsTableCol>
+
+      <ThingsTableCol>
       <ThingsTableTitle>Cancellation policy</ThingsTableTitle>
-        Add your trip dates to get the cancellation details for this stay.
-        <ThingsTableLink>Add dates</ThingsTableLink>
-      </div>
+
+        <br/>Add your trip dates to get the cancellation details for this stay.
+        <p></p><ThingsTableLink>
+          Add dates<ArrowIcon/>
+          </ThingsTableLink>
+      </ThingsTableCol>
 
       </ThingsTable>
     </ThingsToKnowStyled>

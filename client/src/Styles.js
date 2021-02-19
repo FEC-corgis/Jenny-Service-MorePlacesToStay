@@ -1,5 +1,14 @@
 // import styled from 'styled-components';
 import { Star } from "@styled-icons/boxicons-solid";
+import { Clock } from "@styled-icons/icomoon/Clock";
+import { ArrowForwardIos } from "@styled-icons/material-rounded/ArrowForwardIos";
+import { SmokingBan } from "@styled-icons/fa-solid/SmokingBan";
+import { DoorOpenFill } from "@styled-icons/bootstrap/DoorOpenFill";
+import { Pets } from "@styled-icons/material/Pets";
+import { GlassCheers } from "@styled-icons/fa-solid/GlassCheers";
+import { Sparkles } from "@styled-icons/ionicons-solid/Sparkles";
+import { SprayCan } from "@styled-icons/fa-solid/SprayCan";
+import { CheckCircle } from "@styled-icons/material/CheckCircle";
 
 // THINGSTOKNOW
 
@@ -10,9 +19,10 @@ export const ThingsToKnowStyled = window.styled.div`
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
   width: 87vw;
-  height: 60vh;
+  // height: 60vh;
   margin-left: auto;
   margin-right: auto;
+  padding:30px;
 `;
 
 export const ThingsLine = window.styled.div`
@@ -28,6 +38,16 @@ export const ThingsTitle = window.styled.div`
 export const ThingsTable = window.styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+`;
+
+export const ThingsTableCol = window.styled.div`
+`;
+
+export const ThingsTableRow = window.styled.div`
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  padding: 3px;
 `;
 
 export const ThingsTableTitle = window.styled.div`
@@ -168,7 +188,45 @@ export const Superhost = window.styled.div`
   color: lightgray;
 `;
 
+// ICONS
+
 export const PinkStar = window.styled(Star)`
   color: #FF385C;
+  width: 15px;
+`;
+
+export const ClockIcon = window.styled(Clock)`
+  width: 15px;
+`;
+
+export const ArrowIcon = window.styled(ArrowForwardIos)`
+  width: 15px;
+`;
+
+export const NoSmoking = window.styled(SmokingBan)`
+  width: 15px;
+`;
+
+export const SelfCheckIcon = window.styled(DoorOpenFill)`
+  width: 15px;
+`;
+
+export const PetsIcon = window.styled(Pets)`
+  width: 15px;
+`;
+
+export const AlcoholIcon = window.styled(GlassCheers)`
+  width: 15px;
+`;
+
+export const SparkleIcon = window.styled(Sparkles)`
+  width: 15px;
+`;
+
+export const SprayIcon = window.styled(SprayCan)`
+  width: 15px;
+`;
+
+export const CheckIcon = window.styled(CheckCircle)`
   width: 15px;
 `;
