@@ -25,9 +25,9 @@ const House = (props) => {
             </PriceLine>
           </Description>
 
-          <Superhost>
+          {/* <Superhost>
             <br/>Superhost: {props.details.superhost ? "Yes" : "No"}
-            </Superhost>
+            </Superhost> */}
       </HouseStyled>
     )
 }

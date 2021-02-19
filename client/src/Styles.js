@@ -2,6 +2,7 @@
 import { Star } from "@styled-icons/boxicons-solid";
 import { Clock } from "@styled-icons/icomoon/Clock";
 import { ArrowForwardIos } from "@styled-icons/material-rounded/ArrowForwardIos";
+import { ArrowBackIos } from "@styled-icons/material-rounded/ArrowBackIos";
 import { SmokingBan } from "@styled-icons/fa-solid/SmokingBan";
 import { DoorOpenFill } from "@styled-icons/bootstrap/DoorOpenFill";
 import { Pets } from "@styled-icons/material/Pets";
@@ -22,7 +23,7 @@ export const ThingsToKnowStyled = window.styled.div`
   // height: 60vh;
   margin-left: auto;
   margin-right: auto;
-  padding:30px;
+  padding: 25px;
 `;
 
 export const ThingsLine = window.styled.div`
@@ -73,7 +74,11 @@ export const ThingsTableLink = window.styled.span`
 // BACKGROUND
 
 export const GrayBg = window.styled.div`
-  background-color: #F7F7F7
+  background-color: #F7F7F7;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  // padding: 30px;
 `;
 
 export const Carousel = window.styled.div`
@@ -128,7 +133,6 @@ export const Left = window.styled.button`
   border-color: lightgray;
   cursor: pointer;
   box-shadow: 0px 2px 3px lightgray;
-  font-size: 16px;
 `;
 
 export const Right = window.styled.button`
@@ -141,7 +145,6 @@ export const Right = window.styled.button`
   border-color: lightgray;
   cursor: pointer;
   box-shadow: 0px 2px 3px lightgray;
-  font-size: 16px;
 `;
 
 // HOUSE CONTAINERS
@@ -203,6 +206,91 @@ export const Superhost = window.styled.div`
   color: lightgray;
 `;
 
+// TODO
+
+export const TODOCarousel = window.styled.div`
+  display: grid;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  width: 87vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+  "TODOtest TODOtest"
+  "title buttons"
+  "TODOwrapper TODOwrapper"
+  "TODOline TODOline";
+`;
+
+export const TODOTest = window.styled.div`
+  grid-area: TODOtest;
+`;
+
+
+export const TODOWrapperStyled = window.styled.div`
+  grid-area: TODOwrapper;
+  width: 85vw;
+  // overflow: scroll;
+  overflow: hidden;
+
+`;
+
+export const TODOArrayStyled = window.styled.div`
+  display: flex;
+  width: 80vw;
+  column-gap: 17px;
+`;
+
+// TODOHOUSE
+
+export const TODOHouseStyled = window.styled.div`
+`;
+
+export const TODOHousePic = window.styled.img`
+  width: 16vw;
+  border-radius: 10px;
+`;
+
+export const TODORatingLine = window.styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  column-gap: 2px;
+`;
+
+export const TODOReviewCount = window.styled.div`
+  color: gray;
+`;
+
+export const TODODescription = window.styled.div`
+  font-size: 17px;
+  width: 16vw;
+`;
+
+export const TODOPriceLine = window.styled.div`
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  font-size: 16px;
+`;
+
+export const TODOPrice = window.styled.div`
+  font-weight: 700;
+`;
+
+export const TODOLine = window.styled.div`
+  grid-area: TODOline;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  height: 1px;
+  background-color: lightgray;
+`;
+
 // ICONS
 
 export const PinkStar = window.styled(Star)`
@@ -215,6 +303,12 @@ export const ClockIcon = window.styled(Clock)`
 `;
 
 export const ArrowIcon = window.styled(ArrowForwardIos)`
+  width: 15px;
+`;
+
+export const ArrowIconLeft = window.styled(ArrowBackIos)`
+  position: relative;
+  left: 3px;
   width: 15px;
 `;
 
