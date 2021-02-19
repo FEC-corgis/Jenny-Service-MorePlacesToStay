@@ -26,7 +26,11 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
     data.overallRating = Number(overall.data.overallRating)
     res.send(data)
   } catch(e) {
-    console.log('ERROR', e)
+    console.log('FALLBACK!')
+    let data = {}
+    data.houseArray = await dummyData.makeArray()
+    data.overallRating = 4.44
+    res.send(data)
   }
 })
 
