@@ -13,6 +13,15 @@ import { CheckCircle } from "@styled-icons/material/CheckCircle";
 
 // THINGSTOKNOW
 
+export const MaxWidth = window.styled.div`
+  max-width: 1128px;
+  // margin-left: auto;
+  // margin-right: auto;
+  // display: flexbox;
+  // flex-direction: column;
+  justify-content: center;
+`;
+
 export const ThingsToKnowStyled = window.styled.div`
   display: flex;
   flex-direction: column;
@@ -21,9 +30,11 @@ export const ThingsToKnowStyled = window.styled.div`
   font-weight: 300;
   width: 87vw;
   // height: 60vh;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
   padding: 25px;
+  max-width: 1128px;
+
 `;
 
 export const ThingsLine = window.styled.div`
@@ -40,8 +51,11 @@ export const ThingsTitle = window.styled.div`
 `;
 
 export const ThingsTable = window.styled.div`
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  max-width: 1128px;
+
 `;
 
 export const ThingsTableCol = window.styled.div`
@@ -77,21 +91,28 @@ export const ThingsTableLink = window.styled.span`
 // BACKGROUND
 
 export const GrayBg = window.styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
   background-color: #F7F7F7;
   position: absolute;
   left: 0px;
   width: 100%;
   // padding: 30px;
+  // margin-left: auto;
+  // margin-right: auto;
 `;
 
 export const Carousel = window.styled.div`
+max-width: 1128px;
+
   display: grid;
   font-family: Arial, Helvetica, sans-serif;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
   width: 87vw;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
   padding: 30px;
   grid-template-columns: 50% 50%;
   grid-template-areas:
@@ -154,9 +175,12 @@ export const Right = window.styled.button`
 
 export const WrapperStyled = window.styled.div`
   grid-area: wrapper;
+
   width: 85vw;
   // overflow: scroll;
   overflow: hidden;
+  max-width: 1128px;
+
 `;
 
 export const ArrayStyled = window.styled.div`
@@ -214,13 +238,14 @@ export const Superhost = window.styled.div`
 // TODO
 
 export const TODOCarousel = window.styled.div`
+max-width: 1128px;
   display: grid;
   font-family: Arial, Helvetica, sans-serif;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
   width: 87vw;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
   padding: 30px;
   grid-template-columns: 50% 50%;
   grid-template-areas:
@@ -240,10 +265,12 @@ export const TODOWrapperStyled = window.styled.div`
   width: 85vw;
   // overflow: scroll;
   overflow: hidden;
+  max-width: 1128px;
 
 `;
 
 export const TODOArrayStyled = window.styled.div`
+position: relative;
   display: flex;
   width: 80vw;
   column-gap: 17px;

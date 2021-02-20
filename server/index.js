@@ -27,6 +27,7 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
       propObj.propId = dummyIds[i]
       data.push(propObj)
     }
+    console.log('GOT propId data!')
 
     // get overallResults & reviewsTotal via propId
     let myResults = await Promise.all(dummyIds.map(propId => axios(`http://3.22.194.10:1984/reviews/morePlaces/${propId}`)))
@@ -34,6 +35,7 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
       data[i].overallRating = myResults[i].data.overallRating
       data[i].totalReviews = myResults[i].data.reviewsTotal
     }
+    console.log('GOT my reviews data!')
 
     // get main photo, superhost, & title via propId from dane
     let daneResults = await Promise.all(dummyIds.map(propId => axios(`http://ec2-34-228-69-178.compute-1.amazonaws.com:5001/api/headerService/more-places/${propId}`)))
@@ -42,6 +44,7 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
       data[i].houseTitle = daneResults[i].data.title
       data[i].superhost = daneResults[i].data.isSuperhost
     }
+    console.log('GOT danes data!')
 
     // get house type & bedrooms via propId from pauly
     let paulyResults = await Promise.all(dummyIds.map(propId => axios(`http://54.176.104.176:5545/propertyDetails/${propId}`)))
@@ -49,12 +52,13 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
       data[i].houseType = `${paulyResults[i].data[0].property_type} ${paulyResults[i].data[0].property_narrow_type}`
       data[i].bedrooms = paulyResults[i].data[0].rooms
     }
+    console.log('GOT paulys data!')
 
-    // leftover hardcoded data: price & title
+    // hardcoded data: price
     for (let i = 0; i < data.length; i++) {
       data[i].totalPrice = 234
     }
-    console.log('data:', data)
+    // console.log('data:', data)
 
     console.log('SUCCESS!')
     res.send(data)
