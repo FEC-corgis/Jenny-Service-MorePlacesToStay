@@ -171,7 +171,9 @@ export const HouseStyled = window.styled.div`
 `;
 
 export const HousePic = window.styled.img`
+  // position: absolute;
   width: 20vw;
+  height: 13vw;
   border-radius: 10px;
 `;
 

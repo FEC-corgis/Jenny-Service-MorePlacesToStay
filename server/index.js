@@ -27,6 +27,7 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
       propObj.propId = dummyIds[i]
       data.push(propObj)
     }
+
     // get overallResults & reviewsTotal via propId
     let myResults = await Promise.all(dummyIds.map(propId => axios(`http://3.22.194.10:1984/reviews/morePlaces/${propId}`)))
     for (let i = 0; i < myResults.length; i++) {
@@ -35,10 +36,10 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
     }
 
     // get main photo, superhost, & title via propId from dane
-    let daneResults = await Promise.all(dummyIds.map(propId => axios(`http://ec2-34-228-69-178.compute-1.amazonaws.com:5001/api/headerService/${propId}`)))
+    let daneResults = await Promise.all(dummyIds.map(propId => axios(`http://ec2-34-228-69-178.compute-1.amazonaws.com:5001/api/headerService/more-places/${propId}`)))
     for (let i = 0; i < daneResults.length; i++) {
-      data[i].houseUrl = daneResults[i].data.photos[0].link
-      // GET TITLE DATA!!!
+      data[i].houseUrl = daneResults[i].data.photo
+      data[i].houseTitle = daneResults[i].data.title
       data[i].superhost = daneResults[i].data.isSuperhost
     }
 
@@ -52,9 +53,8 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
     // leftover hardcoded data: price & title
     for (let i = 0; i < data.length; i++) {
       data[i].totalPrice = 234
-      data[i].houseTitle = 'NEED TITLE FROM DANE'
     }
-    // console.log('data:', data)
+    console.log('data:', data)
 
     console.log('SUCCESS!')
     res.send(data)

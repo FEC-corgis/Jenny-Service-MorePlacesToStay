@@ -109,7 +109,9 @@
   column-gap: 17px;
 `,bt=window.styled.div`
 `,wt=window.styled.img`
+  // position: absolute;
   width: 20vw;
+  height: 13vw;
   border-radius: 10px;
 `,kt=window.styled.div`
   display: flex;
