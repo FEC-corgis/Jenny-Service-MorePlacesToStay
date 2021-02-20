@@ -5,8 +5,7 @@ import Styles, { HouseStyled, HousePic, PinkStar, RatingLine, Description, Price
 const House = (props) => {
     return (
       <HouseStyled>
-          {/* <br/>{<HousePic src={props.details.houseUrl}/>} */}
-          <br/>{<HousePic src='https://fakehouses.s3.us-east-2.amazonaws.com/0.jpg'/>}
+          <br/>{<HousePic src={props.details.houseUrl}/>}
           <br/>
 
           <RatingLine>

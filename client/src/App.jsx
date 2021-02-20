@@ -55,8 +55,8 @@ const App = (props) => {
   useEffect(() => {
     axios(`/morePlaces/propId/${id}`)
     .then(res =>{
-      console.log('MOREPLACES DUMMYDATA', res.data)
-      setTop12(res.data.houseArray)
+      console.log('MOREPLACES DATATEST!', res.data)
+      setTop12(res.data)
     })
   }, [])
 
@@ -65,8 +65,6 @@ const App = (props) => {
     } else {
       return (
         <div>
-      {/* <ThingsLine></ThingsLine> */}
-
           <ThingsToKnow/>
           <p></p>{" "}
     <GrayBg>
@@ -79,7 +77,6 @@ const App = (props) => {
 
           <Buttons>
             <Counter>{array + 1}/3 </Counter>{" "}
-          {/* <Left onClick={arrowLeft}>{'<'}</Left> */}
           <Left onClick={arrowLeft}><ArrowIconLeft/></Left>
           <Right onClick={arrowRight}><ArrowIcon/></Right>
           </Buttons>
