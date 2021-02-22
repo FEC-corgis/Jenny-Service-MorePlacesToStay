@@ -15,26 +15,27 @@ import { CheckCircle } from "@styled-icons/material/CheckCircle";
 
 export const MaxWidth = window.styled.div`
   max-width: 1128px;
-  // margin-left: auto;
-  // margin-right: auto;
-  // display: flexbox;
-  // flex-direction: column;
-  justify-content: center;
+  display: flex;
+  justify-items: center;
+`;
+
+export const WhiteBg = window.styled.div`
+display: flex;
+justify-content: center;
+width: 100%;
+background-color: white;
 `;
 
 export const ThingsToKnowStyled = window.styled.div`
   display: flex;
   flex-direction: column;
+align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
   width: 87vw;
-  // height: 60vh;
-  // margin-left: auto;
-  // margin-right: auto;
   padding: 25px;
   max-width: 1128px;
-
 `;
 
 export const ThingsLine = window.styled.div`
@@ -48,22 +49,22 @@ export const ThingsLine = window.styled.div`
 export const ThingsTitle = window.styled.div`
   font-size: 22px;
   font-weight: 600;
+  margin-right: auto;
 `;
 
 export const ThingsTable = window.styled.div`
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   max-width: 1128px;
-
 `;
 
 export const ThingsTableCol = window.styled.div`
+
 `;
 
 export const ThingsTableRow = window.styled.div`
-  display: flex;
-  width: 25vw;
+position: relative;
+display: flex;
   align-items: center;
   column-gap: 15px;
   padding: 3px;
@@ -72,7 +73,7 @@ export const ThingsTableRow = window.styled.div`
 export const ThingsTableRowDouble = window.styled.div`
   position: relative;
   left: 30px;
-  width: 22vw;
+  max-width: 22vw;
 `;
 
 export const ThingsTableTitle = window.styled.div`
@@ -98,21 +99,15 @@ align-items: center;
   position: absolute;
   left: 0px;
   width: 100%;
-  // padding: 30px;
-  // margin-left: auto;
-  // margin-right: auto;
 `;
 
 export const Carousel = window.styled.div`
 max-width: 1128px;
-
   display: grid;
   font-family: Arial, Helvetica, sans-serif;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
   width: 87vw;
-  // margin-left: auto;
-  // margin-right: auto;
   padding: 30px;
   grid-template-columns: 50% 50%;
   grid-template-areas:
@@ -175,12 +170,10 @@ export const Right = window.styled.button`
 
 export const WrapperStyled = window.styled.div`
   grid-area: wrapper;
-
   width: 85vw;
   // overflow: scroll;
   overflow: hidden;
   max-width: 1128px;
-
 `;
 
 export const ArrayStyled = window.styled.div`
@@ -195,7 +188,6 @@ export const HouseStyled = window.styled.div`
 `;
 
 export const HousePic = window.styled.img`
-  // position: absolute;
   width: 20vw;
   height: 13vw;
   border-radius: 10px;
@@ -244,8 +236,6 @@ max-width: 1128px;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
   width: 87vw;
-  // margin-left: auto;
-  // margin-right: auto;
   padding: 30px;
   grid-template-columns: 50% 50%;
   grid-template-areas:
@@ -266,7 +256,6 @@ export const TODOWrapperStyled = window.styled.div`
   // overflow: scroll;
   overflow: hidden;
   max-width: 1128px;
-
 `;
 
 export const TODOArrayStyled = window.styled.div`

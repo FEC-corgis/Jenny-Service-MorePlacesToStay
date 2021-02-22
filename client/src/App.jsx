@@ -6,7 +6,7 @@ import House from './House.jsx'
 import ThingsToKnow from './ThingsToKnow.jsx'
 import TODOWrapper from './TODOWrapper.jsx'
 // import styled from 'styled-components'
-import Styles, { Carousel, Test, Title, Buttons, WrapperStyled, Counter, Left, Right, GrayBg, TODOCarousel, TODOTest, TODOTitle, TODOWrapperStyled, TODOLine, ArrowIcon, ArrowIconLeft, ThingsLine, MaxWidth } from './Styles.js'
+import Styles, { Carousel, Test, Title, Buttons, WrapperStyled, Counter, Left, Right, GrayBg, TODOCarousel, TODOTest, TODOTitle, TODOWrapperStyled, TODOLine, ArrowIcon, ArrowIconLeft, ThingsLine, MaxWidth, WhiteBg } from './Styles.js'
 
 const App = (props) => {
   const [top12, setTop12] = useState([])
@@ -65,9 +65,14 @@ const App = (props) => {
     } else {
       return (
         <MaxWidth>
-          <ThingsToKnow/>
+          <Carousel>
+
+          </Carousel>
           <p></p>{" "}
     <GrayBg>
+      <WhiteBg>
+          <ThingsToKnow/>
+          </WhiteBg>
         <p></p><Carousel>
           {/* <Test>
           carousel index: {array} transform: {transform}
