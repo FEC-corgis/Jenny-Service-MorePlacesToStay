@@ -30,7 +30,7 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
     console.log('GOT propId data!')
 
     // get overallResults & reviewsTotal via propId
-    let myResults = await Promise.all(dummyIds.map(propId => axios(`http://3.22.194.10:1984/reviews/morePlaces/${propId}`)))
+    let myResults = await Promise.all(dummyIds.map(propId => axios(`http://3.20.69.232:1984/reviews/morePlaces/${propId}`)))
     for (let i = 0; i < myResults.length; i++) {
       data[i].overallRating = myResults[i].data.overallRating
       data[i].totalReviews = myResults[i].data.reviewsTotal
@@ -38,7 +38,7 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
     console.log('GOT my reviews data!')
 
     // get main photo, superhost, & title via propId from dane
-    let daneResults = await Promise.all(dummyIds.map(propId => axios(`http://ec2-34-228-69-178.compute-1.amazonaws.com:5001/api/headerService/more-places/${propId}`)))
+    let daneResults = await Promise.all(dummyIds.map(propId => axios(`http://54.211.95.226:5001/api/headerService/more-places/${propId}`)))
     for (let i = 0; i < daneResults.length; i++) {
       data[i].houseUrl = daneResults[i].data.photo
       data[i].houseTitle = daneResults[i].data.title
@@ -47,10 +47,10 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
     console.log('GOT danes data!')
 
     // get house type & bedrooms via propId from pauly
-    let paulyResults = await Promise.all(dummyIds.map(propId => axios(`http://54.176.104.176:5545/propertyDetails/${propId}`)))
+    let paulyResults = await Promise.all(dummyIds.map(propId => axios(`http://13.56.218.102:5545/propertyDetails/${propId}`)))
     for (let i = 0; i < paulyResults.length; i++) {
       data[i].houseType = `${paulyResults[i].data[0].property_type} ${paulyResults[i].data[0].property_narrow_type}`
-      data[i].bedrooms = paulyResults[i].data[0].rooms
+      data[i].bedrooms = paulyResults[i].data[0].beds
     }
     console.log('GOT paulys data!')
 
@@ -63,8 +63,8 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
     console.log('SUCCESS!')
     res.send(data)
   } catch(e) {
-    console.log('FALLBACK!')
-    let data = await dummyData.makeArray()
+    console.log('FALLBACK!', e)
+    let data = dummyData.makeArray()
     res.send(data)
   }
 })
