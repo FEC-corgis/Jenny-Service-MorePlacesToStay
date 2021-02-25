@@ -133,7 +133,8 @@ export const Buttons = window.styled.div`
   display: flex;
   align-items: center;
   column-gap: 12px;
-  margin-left: 72%;
+  // margin-left: 72%;
+  margin-left: auto;
 `;
 
 export const Counter = window.styled.div`

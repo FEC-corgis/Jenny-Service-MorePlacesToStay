@@ -85,7 +85,8 @@ max-width: 1128px;
   display: flex;
   align-items: center;
   column-gap: 12px;
-  margin-left: 72%;
+  // margin-left: 72%;
+  margin-left: auto;
 `,gt=window.styled.div`
   font-size: 13px;
   font-weight: 400;
