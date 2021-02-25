@@ -16,7 +16,8 @@ align-items: center;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
   width: 87vw;
-  padding: 25px;
+  // padding: 25px;
+  padding: 48px;
   max-width: 1128px;
 `,ot=(window.styled.div`
   height: 1px;
