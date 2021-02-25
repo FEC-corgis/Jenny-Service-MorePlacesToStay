@@ -5,6 +5,7 @@ import HouseArray from './HouseArray.jsx'
 import House from './House.jsx'
 import ThingsToKnow from './ThingsToKnow.jsx'
 import TODOWrapper from './TODOWrapper.jsx'
+import PaulyTest from './PaulyTest.jsx'
 // import styled from 'styled-components'
 import Styles, { Carousel, Test, Title, Buttons, WrapperStyled, Counter, Left, Right, GrayBg, TODOCarousel, TODOTest, TODOTitle, TODOWrapperStyled, TODOLine, ArrowIcon, ArrowIconLeft, ThingsLine, MaxWidth, WhiteBg } from './Styles.js'
 
@@ -65,10 +66,6 @@ const App = (props) => {
     } else {
       return (
         <MaxWidth>
-          <Carousel>
-
-          </Carousel>
-          <p></p>{" "}
     <GrayBg>
       <WhiteBg>
           <ThingsToKnow/>
@@ -116,6 +113,9 @@ const App = (props) => {
         </TODOWrapperStyled>
 
         </TODOCarousel>
+
+          <PaulyTest/>
+
   </GrayBg>
         </MaxWidth>
       )

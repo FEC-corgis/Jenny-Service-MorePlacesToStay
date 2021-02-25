@@ -312,6 +312,163 @@ export const TODOLine = window.styled.div`
   background-color: lightgray;
 `;
 
+// PAULY TEST
+
+export const PaulyFooter = window.styled.div`
+display: block;
+background-color: #f7f7f7;
+border-top: 1px solid #DDDDDD;
+color: rgb(34,34,34);
+font-weight: 400;
+font-size: 16px;
+padding-bottom: 0px;
+font-family: 'Nunito Sans', sans-serif;
+`;
+
+export const PaulySectionContainer = window.styled.div`
+display: block;
+color: rgb(34,34,34);
+margin-left: 197px;
+margin-right: 197px;
+margin-top: 0px;
+margin-bottom: 0px;
+// max-width: 1280px;
+max-width: 1128px;
+padding-left: 80px;
+padding-right: 80px;
+text-size-adjust: 100%;
+
+`;
+
+export const PaulyColContainer = window.styled.div`
+display: flex;
+flex-direction: row;
+margin-left: -12px;
+margin-right: -12px;
+padding-bottom: 48px;
+padding-top: 48px;
+padding-left: 0px;
+padding-right: 0px;
+text-size-adjust: 100%;
+`;
+
+export const PaulyCol = window.styled.div`
+display: block;
+border-bottom-color: rgb(34,34,34);
+border-bottom-style: none;
+border-bottom-width: 0px;
+margin-bottom: 0px;
+padding-bottom: 0px;
+padding-left: 12px;
+padding-right: 12px;
+text-size-adjust: 100%;
+width: 286px;
+`;
+
+export const PaulyHfoot = window.styled.h4`
+font-family: 'Nunito Sans', sans-serif;
+
+font-weight: 700;
+margin-block-end: 0px;
+margin-block-start: 0px;
+margin-bottom: 0px;
+margin-inline-end: 0px;
+margin-inline-start: 0px;
+margin-top: 0px;
+text-size-adjust: 100%;
+text-transform: uppercase;
+`;
+
+export const PaulyUfoot = window.styled.ul`
+font-family: 'Nunito Sans', sans-serif;
+
+display: block;
+flex-wrap: wrap;
+font-weight: 400;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+margin-block-end: 0px;
+margin-block-start: 0px;
+margin-bottom: 0px;
+margin-inline-end: 0px;
+margin-inline-start: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+padding-bottom: 0px;
+padding-inline-start: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 0px;
+text-size-adjust: 100%;
+`;
+
+export const PaulyLfoot = window.styled.li`
+font-family: 'Nunito Sans', sans-serif;
+box-sizing: border-box;
+display: list-item;
+flex-basis: 33.3333%;
+font-weight: 400;
+height: 20px;
+line-height: 20px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+margin-top: 16px;
+padding-left: 0px;
+padding-right: 0px;
+text-align: left;
+text-size-adjust: 100%;
+`;
+
+export const PaulyFooterDesc = window.styled.div`
+font-family: 'Nunito Sans', sans-serif;
+border-top-color: rgb(221, 221, 221);
+font-size:14px;
+line-height:18px;
+font-weight:400;
+border-top-style: solid;
+border-top-width: 1px;
+box-sizing: border-box;
+display: block;
+height: 69px;
+padding-bottom: 24px;
+padding-top: 24px;
+text-size-adjust: 100%;
+`;
+
+export const PaulyFooterSection = window.styled.div`
+margin: auto;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+line-height: 20px;
+text-align: left;
+text-size-adjust: 100%;
+width: 1120px;
+`;
+
+export const PaulySocialContainer = window.styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+text-align: left;
+width: 327px;
+margin-right: 24px;
+margin-bottom: 0px;
+text-size-adjust: 100%;
+`;
+
+export const PaulyEnglish = window.styled.div`
+display: flex;
+flex-direction: row;
+`;
+
+export const PaulyFooterImg = window.styled.img`
+width: 18px;
+`;
+
 // ICONS
 
 export const PinkStar = window.styled(Star)`
