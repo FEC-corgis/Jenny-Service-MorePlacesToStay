@@ -73,7 +73,7 @@ display: flex;
 export const ThingsTableRowDouble = window.styled.div`
   position: relative;
   left: 30px;
-  max-width: 22vw;
+  max-width: 15vw;
 `;
 
 export const ThingsTableTitle = window.styled.div`

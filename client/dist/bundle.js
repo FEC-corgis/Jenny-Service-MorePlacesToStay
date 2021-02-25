@@ -43,7 +43,7 @@ display: flex;
 `,st=window.styled.div`
   position: relative;
   left: 30px;
-  max-width: 22vw;
+  max-width: 15vw;
 `,ct=window.styled.div`
   position: relative;
   display: inline-block;
