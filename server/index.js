@@ -7,10 +7,10 @@ const cors = require('cors')
 const axios = require('axios')
 const path = require('path')
 
-// app.get('/bundle.js', (req, res) => {
-//   res.sendFile(path.join(__dirname, '../client/dist/bundle.js'))
-// })
-// app.use('/rooms/:id', express.static('./client/dist'))
+app.get('/bundle.js', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/dist/bundle.js'))
+})
+app.use('/rooms/:id', express.static('./client/dist'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
@@ -18,19 +18,27 @@ app.use(cors())
 app.get('/morePlaces/propId/:id', async (req, res) => {
   const id = req.params.id
   try {
+    let paulyArray = await axios(`http://54.215.197.139:4454/region/${id}`)
+    // console.log('RESULT OF PAULY TEST', paulyArray.data)
+    let paulyRes = []
+    for (let i = 0; i < 12; i++) {
+      // console.log('element', paulyArray.data[i])
+      paulyRes.push(paulyArray.data[i].id)
+    }
+    console.log('RESULTS OF PAULY PUSH', paulyRes)
     // get propIds via specific metric
     let data = []
-    let dummyIds = [1,2,3,4,5,6,7,8,9,10,11,12]
-    for (let i = 0; i < dummyIds.length; i++) {
+    // let dummyIds = [1,2,3,4,5,6,7,8,9,10,11,12]
+    for (let i = 0; i < paulyRes.length; i++) {
       // create array of data objs and assign propIds
       let propObj = {}
-      propObj.propId = dummyIds[i]
+      propObj.propId = paulyRes[i]
       data.push(propObj)
     }
     console.log('GOT propId data!')
 
     // get overallResults & reviewsTotal via propId
-    let myResults = await Promise.all(dummyIds.map(propId => axios(`http://3.20.69.232:1984/reviews/morePlaces/${propId}`)))
+    let myResults = await Promise.all(paulyRes.map(propId => axios(`http://3.20.69.232:1984/reviews/morePlaces/${propId}`)))
     for (let i = 0; i < myResults.length; i++) {
       data[i].overallRating = myResults[i].data.overallRating
       data[i].totalReviews = myResults[i].data.reviewsTotal
@@ -38,7 +46,7 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
     console.log('GOT my reviews data!')
 
     // get main photo, superhost, & title via propId from dane
-    let daneResults = await Promise.all(dummyIds.map(propId => axios(`http://54.211.95.226:5001/api/headerService/more-places/${propId}`)))
+    let daneResults = await Promise.all(paulyRes.map(propId => axios(`http://54.211.95.226:5001/api/headerService/more-places/${propId}`)))
     for (let i = 0; i < daneResults.length; i++) {
       data[i].houseUrl = daneResults[i].data.photo
       data[i].houseTitle = daneResults[i].data.title
@@ -47,7 +55,7 @@ app.get('/morePlaces/propId/:id', async (req, res) => {
     console.log('GOT danes data!')
 
     // get house type & bedrooms via propId from pauly
-    let paulyResults = await Promise.all(dummyIds.map(propId => axios(`http://13.56.218.102:5545/propertyDetails/${propId}`)))
+    let paulyResults = await Promise.all(paulyRes.map(propId => axios(`http://13.56.218.102:5545/propertyDetails/${propId}`)))
     for (let i = 0; i < paulyResults.length; i++) {
       data[i].houseType = `${paulyResults[i].data[0].property_type} ${paulyResults[i].data[0].property_narrow_type}`
       data[i].bedrooms = paulyResults[i].data[0].beds
