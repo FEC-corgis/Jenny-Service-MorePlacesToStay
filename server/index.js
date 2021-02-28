@@ -1,3 +1,4 @@
+const compression = require('compression')
 const express = require('express')
 const app = express()
 const port = 1985
@@ -7,6 +8,7 @@ const cors = require('cors')
 const axios = require('axios')
 const path = require('path')
 
+app.use(compression())
 app.get('/bundle.js', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/dist/bundle.js'))
 })
@@ -18,11 +20,12 @@ app.use(cors())
 app.get('/morePlaces/propId/:id', async (req, res) => {
   const id = req.params.id
   try {
+    throw 'bypassing classmate requests'
     let paulyArray = await axios(`http://54.215.197.139:4454/region/${id}`)
     // console.log('RESULT OF PAULY TEST', paulyArray.data)
     let paulyRes = []
     for (let i = 0; i < 12; i++) {
-      // console.log('element', paulyArray.data[i])
+      console.log('element', paulyArray.data[i])
       paulyRes.push(paulyArray.data[i].id)
     }
     console.log('RESULTS OF PAULY PUSH', paulyRes)
