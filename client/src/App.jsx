@@ -65,16 +65,15 @@ const App = (props) => {
       return null
     } else {
       return (
-        <MaxWidth>
-    <GrayBg>
-      <WhiteBg>
+    <MaxWidth>
+      <GrayBg>
+      {/* <WhiteBg>
           <ThingsToKnow/>
-          </WhiteBg>
+          </WhiteBg> */}
         <p></p><Carousel>
           {/* <Test>
           carousel index: {array} transform: {transform}
         </Test> */}
-
           <Title>More places to stay</Title>
 
           <Buttons>
@@ -92,10 +91,10 @@ const App = (props) => {
           </WrapperStyled>
 
         </Carousel>
+
           {/* <TODOTest>
           carousel index: {todoArray} transform: {todoTransform}
         </TODOTest> */}
-
         <TODOCarousel>
           <Title>Things to do nearby</Title>
 
@@ -111,13 +110,11 @@ const App = (props) => {
           todoTransform = {todoTransform}
           />
         </TODOWrapperStyled>
-
         </TODOCarousel>
 
-          <PaulyTest/>
-
-  </GrayBg>
-        </MaxWidth>
+          {/* <PaulyTest/> */}
+    </GrayBg>
+   </MaxWidth>
       )
     }
 }
